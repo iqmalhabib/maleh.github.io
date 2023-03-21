@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout Page</title>
+  <link rel="stylesheet" type="text/css" href="mystyle1.css">
+</head>
+<body>
+  <div class="container">
+  <div class="checkout_wrapper">
+    <div class="product_info">
+      <img src="supply.png" alt="product">
+      <div class="content">
+        <h3>Supplement<br>and<br>Nutrition<br/>Ordering System</h3><br>
+        <p>- All supplement in one place -</p>
+      </div>
+    </div>
+    <div class="checkout_form">
+      <p>Payment Section</p>
+      <div class="details">
+        <div class="section">
+          <input type="text" placeholder="Card Number">
+        </div>
+        <div class="section">
+          <input type="text" placeholder="Cardholder Name">
+        </div>
+        <div class="section last_section">
+          <div class="item">
+            <input type="text" placeholder="Expiry Date">
+          </div>
+          <div class="item">
+            <input type="text" placeholder="CVV">
+          </div>
+        </div> 
+        <div class="btn" onclick="openPopup()">
+          <button type="submit"class="btn"onclick="openPopup()">Pay</button>
+        </div>
+      </div>
+      <a href="cart.html">Cancel</a>
+    </div>
+  </div>
+  <div class="popup"id=popup>
+      <img src="checked.png">
+      <h2>Thank You!</h2>
+      <p>Your item will be delivered soon</p>
+      <a href="index.html">
+      <button type="button">OK</button>
+      </a>
+  </div>
+</div>
+<script>
+  let popup=document.getElementById('popup');
+  function openPopup() {
+    popup.classList.add("open-popup");
+  }
+</script>
+</body>
+</html>

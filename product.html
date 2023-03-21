@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Page</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+       <nav>
+         <ul>
+           <li><a href="index.html" style="--clr:#FF0000"><span>Home</span></a></li>
+           <li><a href="aboutus.html"style="--clr:#FF0000"><span>About</span></a></li>
+           <li><a href="product.html"style="--clr:#FF0000"><span>Product</span></a></li>
+         </ul>
+       </nav>
+        <div class="logincart">
+             <nav>
+             <a href="login.html">Login</a>
+              <a href="cart.html">
+             <img src="cart.png"class="cart">
+             </a>
+             </nav>           
+        </div>
+      </div>
+    <div class="backgroundcategory">
+    <h2>CATEGORY</h2><br>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('whey')"> Whey Protein</button>
+  <button class="btn" onclick="filterSelection('burn')"> Fat Burner</button>
+  <button class="btn" onclick="filterSelection('pre')"> Pre Workout</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column whey">
+    <div class="content1">
+      <a href="whey1.html"><img src="whey1.jpg"  style="width:100%"></a>
+      <h4>RM 100.00</h4>
+      <p>Titan Whey</p>
+    </div>
+  </div>
+  <div class="column whey">
+    <div class="content1">
+      <img src="whey2.jpg"  style="width:100%">
+      <h4>RM 90.00</h4>
+      <p>Titan Mass</p>
+    </div>
+  </div>
+  <div class="column whey">
+    <div class="content1">
+      <img src="whey3.jpg"  style="width:100%">
+      <h4>RM 85.00</h4>
+      <p>Titan Burn</p>
+    </div>
+  </div>
+   <div class="column burn">
+    <div class="content1">
+      <img src="burn1.jpg"  style="width:100%">
+      <h4>RM 70.00</h4>
+      <p>Hydroxycut Hardcore Elite</p>
+    </div>
+  </div>
+  <div class="column burn">
+    <div class="content1">
+      <a href="burn2.html"><img src="burn2.jpg"  style="width:100%"></a>
+      <h4>RM 75.00</h4>
+      <p>Premium Women's Fat Burner</p>
+    </div>
+  </div>
+  <div class="column burn">
+    <div class="content1">
+    <img src="burn3.jpg"  style="width:100%">
+      <h4>RM 80.00</h4>
+      <p>Daily Fat Burner</p>
+    </div>
+  </div>
+
+  <div class="column pre">
+    <div class="content1">
+      <img src="pre1.jpg"  style="width:100%">
+      <h4>RM 85.00</h4>
+      <p>Gold Standard Pre-Workout</p>
+    </div>
+  </div>
+  <div class="column pre">
+    <div class="content1">
+    <img src="pre2.png"  style="width:100%">
+      <h4>RM 75.00</h4>
+      <p>C4 Original Pre-Workout</p>
+    </div>
+  </div>
+  <div class="column pre">
+    <div class="content1">
+    <a href="pre3.html"><img src="pre3.jpg"  style="width:100%"></a>
+      <h4>RM 80.00</h4>
+      <p>MR Hyde NitroX Pre-Workout</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<footer>
+        <center>Copyright © 2022 Supplement and Nutrition Ordering System</center>
+</footer>
+</body>
+</html>
