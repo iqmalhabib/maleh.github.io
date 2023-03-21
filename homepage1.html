@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>  
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+       <nav>
+         <ul>
+           <li><a href="homepage1.html" style="--clr:#808080"><span>Home</span></a></li>
+           <li><a href="aboutus.html"   style="--clr:#808080"><span>About</span></a></li>
+           <li><a href="product.html"   style="--clr:#808080"><span>Product</span></a></li>          
+         </ul>
+       </nav>
+           <div class="logincart">
+             <nav>
+             <a href="login.html">Login</a>
+              <a href="cart.html">
+             <img src="cart.png"class="cart">
+             </a>
+             </nav>           
+           </div>
+
+    </div>
+    <div class="content">
+	    <center>
+        <h1>Supplement and Nutrition Ordering System</h1>
+        <p>- All supplement in one place -</p>
+		</center>
+    </div>
+    <br><br>
+    <!---------sosial-------->
+  
+    <!-------------slide------------------->
+    <div class="slideshow-container">
+        <div class="mySlides fade">   
+          <img src="product1.jpg" style="width:100%">  
+        </div>
+        <div class="mySlides fade">
+          <img src="product2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="product3.jpg" style="width:100%">
+        </div>
+    </div>
+</div><!-------end of container------------>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+    <footer>
+        <center>Copyright © 2022 Supplement and Nutrition Ordering System</center>
+    </footer>
+</body>
+</html>

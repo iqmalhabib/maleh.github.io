@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart Page</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+       <nav>
+         <ul>
+           <li><a href="homepage1.html" style="--clr:#1e9bff"><span>Home</span></a></li>
+           <li><a href="aboutus.html"style="--clr:#1e9bff"><span>About</span></a></li>
+           <li><a href="product.html"style="--clr:#1e9bff"><span>Product</span></a></li>
+         </ul>
+       </nav>
+        <div class="logincart">
+             <nav>
+             <a href="login.html">Login</a>
+             <a href="cart.html">
+             <img src="cart.png"class="cart">
+             </a>
+             </nav>           
+        </div>
+    </div>
+<!---------------cart page--------------->
+    <div class="small-container1 cart-page">
+      <table>
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="whey1.jpg">
+              <div>
+                <p>Titan Whey</p>
+                <small>Price: RM100.00</small><br>
+				        <small>Flavour: Mango
+                <br>
+                <button class="btn-danger" type="button">Remove</button>
+              </div>
+            </div>
+          </td>
+          <td><input type="number"value="2"></td>
+          <td>RM200.00</td>
+        </tr>
+         <tr>
+          <td>
+            <div class="cart-info">
+              <img src="burn2.jpg">
+              <div>
+                <p>Premium Women's Fat Burner</p>
+                <small>Price: RM75.00</small>
+                <br>
+                <button class="btn-danger" type="button">Remove</button>
+              </div>
+            </div>
+          </td>
+          <td><input type="number"value="1"></td>
+          <td>RM75.00</td>
+        </tr>
+		</tr>
+         <tr>
+          <td>
+            <div class="cart-info">
+              <img src="pre3.jpg">
+              <div>
+                <p>MR Hyde NitroX Pre-Workout</p>
+                <small>Price: RM80.00</small>
+                <br>
+                <button class="btn-danger" type="button">Remove</button>
+              </div>
+            </div>
+          </td>
+          <td><input type="number"value="2"></td>
+          <td>RM160.00</td>
+        </tr>
+      </table>
+      <div class="total-price">
+        <table>
+          <tr>
+            <td>Total</td>
+            <td>RM435.00</td>
+          </tr>
+          <tr>
+          </tr>
+        </table>
+      </div>
+      <div class="proceed">
+        <a href="checkout.html">PROCEED TO CHECKOUT</a>
+      </div>
+    </div>
+</div>
+<footer>
+        <center>Copyright © 2022 Supplement and Nutrition Ordering System</center>
+</footer>
+</body>
+</html>
